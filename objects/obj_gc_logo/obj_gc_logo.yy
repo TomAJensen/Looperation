@@ -42,8 +42,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"srp_logo_2",
-    "path":"sprites/srp_logo_2/srp_logo_2.yy",
+    "name":"spr_logo_disk",
+    "path":"sprites/spr_logo_disk/spr_logo_disk.yy",
   },
   "spriteMaskId":null,
   "visible":true,

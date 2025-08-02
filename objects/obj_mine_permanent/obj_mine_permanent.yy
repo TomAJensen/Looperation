@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_permanent_mine",
-    "path":"sprites/spr_permanent_mine/spr_permanent_mine.yy",
+    "name":"spr_bouncy",
+    "path":"sprites/spr_bouncy/spr_bouncy.yy",
   },
   "spriteMaskId":null,
   "visible":true,

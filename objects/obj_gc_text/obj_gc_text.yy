@@ -1,12 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bang",
+  "%Name":"obj_gc_text",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_bang",
+  "name":"obj_gc_text",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_portal",
-    "path":"sprites/spr_portal/spr_portal.yy",
+    "name":"spr_gc_text",
+    "path":"sprites/spr_gc_text/spr_gc_text.yy",
   },
   "spriteMaskId":null,
   "visible":true,

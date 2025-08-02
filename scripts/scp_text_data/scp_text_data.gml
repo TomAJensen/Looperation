@@ -8,7 +8,7 @@ CONSOLE_TEXTS[$"#intro"] = [
 "Find your fellow Smorgs and surround them with energy fields to create a Tele-Portal(tm) so they may escape.",
 "",
 "Instructions:",
-"As your avatar travels the rift, press the SPACE bar to travel in a a loop. Tap the SHIFT key while looping to begine placing energy fields around your " + 
+"As your avatar travels the rift, press the SPACE bar to travel in a a loop. Tap the SHIFT key while looping to begin placing energy fields around your " + 
   "fellow Smorgs and allow them to escape through the Tele-Portal(tm).",
 "", 
 "Colliding with a fellow Smorg causes them damage. If they take too much damage they are expelled from the rift into unknown space to be lost forever.",
