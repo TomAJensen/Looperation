@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scp_messaging",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scp_messaging",
+  "parent":{
+    "name":"interactables",
+    "path":"folders/Scripts/interactables.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

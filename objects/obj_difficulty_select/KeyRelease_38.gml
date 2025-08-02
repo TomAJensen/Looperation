@@ -1,0 +1,1 @@
+_cur_difficulty = max(0, _cur_difficulty - 1);

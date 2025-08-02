@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scp_text_data",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scp_text_data",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
