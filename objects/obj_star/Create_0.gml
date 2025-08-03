@@ -6,6 +6,8 @@ _shake_index = 0;
 _shake_delay = game_get_speed(gamespeed_fps) * .02;
 _in_shake = false;
 _collison_delay = 0;
+_inportal = false;
+_shrink = 1 / 60;
 
 _snark_index = 0;
 _shake_vals = [
@@ -36,13 +38,17 @@ function shake() {
     _snark_index = _snark_index % 6; 
 }
 
-_event_types = [MSG_SAVED]
+_event_types = [MSG_SAVED, MSG_PORTAL]
 
 _msg_handler = function(msg) {
-    var location = utils_place_friend();
-    x = location[_X_];
-    y = location[_Y_];
-    _cur_x = x;
-    _cur_y = y;
-    return true;
+    switch(msg[$ "type"]) {
+        case MSG_SAVED:
+            visible = false;
+            x = -100;    // move so no collision
+            alarm[1] = FPS * .5;
+            return true;
+        case MSG_PORTAL:
+            _inportal = true;
+            return true;        
+    }
 }

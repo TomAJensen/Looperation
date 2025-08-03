@@ -1,0 +1,10 @@
+var location = utils_place_friend();
+x = location[_X_];
+y = location[_Y_];
+_cur_x = x;
+_cur_y = y;
+image_xscale = 2;
+image_yscale = 2;
+_inportal = false;
+image_angle = 0;
+visible = true;

@@ -1,4 +1,5 @@
 /// @description 
+event_inherited();
 
 if(!place_meeting(x, y, obj_friend)) {
     _in_collision = false;

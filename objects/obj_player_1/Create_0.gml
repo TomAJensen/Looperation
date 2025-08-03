@@ -1,4 +1,5 @@
 /// @description 
+event_inherited();
 direction = 0;
 speed = PLAYER_SPEED;
 
@@ -19,6 +20,13 @@ _points = []
 _found = [];
 _shift_latch = false;
 alarm[FIRST_FRIEND] = game_get_speed(gamespeed_fps) * .5
+_event_types = [MSG_NEXT_FRIEND];
+
+_msg_handler = function(msg) {
+     var inst = instance_find(obj_friend_manager, 0);
+    inst.next_friend();
+    return true;
+}
 
 function handle_fields()
 {
@@ -45,9 +53,8 @@ function handle_fields()
             _shift_latch = false;
             var friend_manager = instance_find(obj_friend_manager, 0);
             friend_manager.saved_friend();
-            alarm[NEXT_FRIEND] = 10;
         } else {
-            alarm[CLEAR_FIELDS] = game_get_speed(gamespeed_fps) * .25;
+            //alarm[CLEAR_FIELDS] = game_get_speed(gamespeed_fps) * .25;
         }
         _points = [];
         speed = PLAYER_SPEED;

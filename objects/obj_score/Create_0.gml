@@ -1,3 +1,5 @@
+ds_map_clear(global.subscribers);
+ds_list_clear(global.message_queue);
 _score = SCORE_INFO[$"score"]
 _saved = SCORE_INFO[$"saved"]
 _friends = SCORE_INFO[$"friends"]

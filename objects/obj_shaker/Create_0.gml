@@ -1,4 +1,5 @@
 /// @description Setup common code for items that shake when collided with.
+event_inherited();
 _cur_x = x;
 _cur_y = y;
 _shake_index = 0;

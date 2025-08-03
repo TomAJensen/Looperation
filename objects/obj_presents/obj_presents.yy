@@ -14,8 +14,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_interactable","path":"objects/obj_interactable/obj_interactable.yy",},"propertyId":{"name":"inst_name","path":"objects/obj_interactable/obj_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"presents",},
   ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Logo",
+    "path":"folders/Objects/Logo.yy",
   },
   "parentObjectId":{
     "name":"obj_interactable",
@@ -42,8 +42,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_presents",
-    "path":"sprites/spr_presents/spr_presents.yy",
+    "name":"spr_orange_presents",
+    "path":"sprites/spr_orange_presents/spr_orange_presents.yy",
   },
   "spriteMaskId":null,
   "visible":true,

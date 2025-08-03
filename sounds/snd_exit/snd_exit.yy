@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.2077551,
+  "duration":1.5,
   "name":"snd_exit",
   "parent":{
     "name":"Sounds",

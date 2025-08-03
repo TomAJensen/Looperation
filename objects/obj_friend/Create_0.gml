@@ -1,25 +1,8 @@
 /// @description 
 event_inherited();
+_inportal = false;    
 image_index = 0;
-//_cur_x = x;
-//_cur_y = y;
-//_shake_index = 0;
-//_shake_delay = game_get_speed(gamespeed_fps) * .02;
-//
-//
-//_shake_vals = [
-    //[-2, -2],
-    //[2, 2],
-    //[0, 0],
-    //[-2, 2],
-    //[2, -2],
-    //[0, 0]
-//]
-//
-//shake = function () {
-    //_shake_index = 0;
-    //alarm[0] = _shake_delay;
-//}
+
 
 image_alpha = 0;
 alarm[2] = 1;
@@ -32,4 +15,20 @@ check_collision = function () {
 reposition = function () {
     _cur_x = x;
     _cur_y = y;
+}
+
+_event_types = [MSG_PORTAL, MSG_SAVED]
+
+_msg_handler = function(msg) {
+    switch(msg[$"type"]) {
+        case MSG_PORTAL:
+            _inportal = true;
+            image_alpha = 1;
+            return true;
+        case MSG_SAVED:
+            alarm[3] = FPS * .5;
+            x = -100;
+            return true;
+    }
+    return true;
 }

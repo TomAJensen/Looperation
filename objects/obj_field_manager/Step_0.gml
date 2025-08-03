@@ -22,7 +22,8 @@ if(_collapsing) {
     instance_create_layer(friend.x, friend.y, "Instances", obj_bang)
     if(destroy_with_bang) {
         instance_destroy(friend);
-       
+    } else {
+        msg_publish(msg_build_msg(MSG_PORTAL, "field_manager", {}))
     }
      
     _collapsing = false;

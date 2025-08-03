@@ -48,6 +48,8 @@ global.speeds = [
 #macro MSG_SCREEN_SWITCH "screen_switch" 
 #macro MSG_FADE_STATE "fade_state"
 #macro MSG_SAVED "saved"
+#macro MSG_PORTAL "portal"
+#macro MSG_NEXT_FRIEND "next_friend" 
 #macro FADED_IN "faded_in"
 #macro FADED_OUT "faded_out"   
 
@@ -68,6 +70,11 @@ global.score_info = noone;
 
 global.next_world = rm_test;
 #macro NEXT_WORLD global.next_world
+global.current_world = rm_test
+#macro CURRENT_WORLD global.current_world
+
+global.game_speed = 0;
+#macro FPS global.game_speed
 
 
 

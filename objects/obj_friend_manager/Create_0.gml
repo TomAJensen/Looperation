@@ -36,14 +36,6 @@ function next_friend() {
     //yy = 718;
     var friend = instance_create_layer(xx, yy, "Instances", obj_friend, { "timed": timed});
     utils_boundry_adjust(friend);
-    //var boundry = friend.check_collision();
-    //if(boundry != noone) {
-        //var collision_info = utils_get_collision_dir(boundry, friend)
-        //var side = collision_info[$"x"] != "" ? collision_info[$"x"] : collision_info[$"y"];
-        //utils_un_collide(side, boundry, friend)
-        //friend.reposition();
-    //}
-    
     _friend_count--
     
 }

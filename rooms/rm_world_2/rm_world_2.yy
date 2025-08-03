@@ -15,6 +15,7 @@
     {"name":"inst_39B6674","path":"rooms/rm_world_2/rm_world_2.yy",},
     {"name":"inst_1030696","path":"rooms/rm_world_2/rm_world_2.yy",},
     {"name":"inst_4FCC235","path":"rooms/rm_world_2/rm_world_2.yy",},
+    {"name":"inst_7F4C2402","path":"rooms/rm_world_2/rm_world_2.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -35,6 +36,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_sound_player","path":"objects/obj_sound_player/obj_sound_player.yy",},"propertyId":{"name":"the_priority","path":"objects/obj_sound_player/obj_sound_player.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"10",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1376.0,"y":608.0,},
         {"$GMRInstance":"v2","%Name":"inst_4FCC235","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4FCC235","objectId":{"name":"obj_twinkle_manager","path":"objects/obj_twinkle_manager/obj_twinkle_manager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1504.0,"y":544.0,},
+        {"$GMRInstance":"v2","%Name":"inst_7F4C2402","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7F4C2402","objectId":{"name":"obj_messenger","path":"objects/obj_messenger/obj_messenger.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1600.0,"y":736.0,},
       ],"layers":[],"name":"overlay","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"twinkles","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"twinkles","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},

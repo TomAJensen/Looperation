@@ -12,10 +12,14 @@ if(string_starts_with(the_text, "#")) {
 
 
 _line_index = 0;
-_line_delay = game_get_speed(gamespeed_fps);
+_line_delay = game_get_speed(gamespeed_fps) * 1.5;
 _char_delay = 1;
 _char_index = 0;
 _current_line = "";
+_cursor = "|"
+_blink_speed = game_get_speed(gamespeed_fps) * 0.33;
+
+alarm[3] = _blink_speed;
 
 function next_line() {
     if(_line_index == array_length(_data_text)) {
