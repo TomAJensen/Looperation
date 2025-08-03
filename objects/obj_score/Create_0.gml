@@ -3,6 +3,8 @@ ds_list_clear(global.message_queue);
 _score = SCORE_INFO[$"score"]
 _saved = SCORE_INFO[$"saved"]
 _friends = SCORE_INFO[$"friends"]
+var world_name = room_get_name(CURRENT_WORLD);
+WORLD_SCORE_INFO[$world_name] = SCORE_INFO;
 _curx = x;
 _cury = y;
  x = -100;
@@ -20,11 +22,11 @@ var percentage = (_score / total_score) * 100;
 var response_texts = [
     
 ]
-
+var next_world_text = room_get_name(NEXT_WORLD) == "rm_end" ? "complete your travels!" : "travel to the next realm!";
 _display_text = $"Smorgs saved: {_saved} of {_friends}\n" +
 $"Percentage achieved {percentage}%\n" +
 $"Score: {_score} out of {total_score}\n\n\n" +
-"Press Enter to travel to the next realm!\n" +
+$"Press Enter to {next_world_text}\n" +
 "Press BACKSPACE to play the realm again!\n" +
 "Press ESC to return to the title screen"
 

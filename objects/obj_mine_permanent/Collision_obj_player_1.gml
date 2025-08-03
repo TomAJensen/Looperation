@@ -17,6 +17,7 @@ if(vspd_adjust == -1) {
 if(other._circle) {
     other._circle = false;
     other.speed = PLAYER_SPEED;
+    utils_stop_sound(other._splzzzt_sound_id);
 }
 
 

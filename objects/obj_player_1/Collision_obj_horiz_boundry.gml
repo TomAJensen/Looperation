@@ -11,7 +11,8 @@ if(other.bbox_top > bbox_top) {
 if(direction_changed == true) {
     var d = 360 - direction;
     direction = d;
-_circle = false;
-speed = PLAYER_SPEED;
+    _circle = false;
+    speed = PLAYER_SPEED;
+    utils_stop_sound(_splzzzt_sound_id);
     
 } 

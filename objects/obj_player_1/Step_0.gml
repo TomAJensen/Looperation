@@ -1,8 +1,8 @@
 /// @description 
 event_inherited();
 
-if(!place_meeting(x, y, obj_friend)) {
-    _in_collision = false;
+if(!place_meeting(x, y, _collided_friend_id)) {
+    _collided_friend_id = false;
 }
 
 if(_circle) {

@@ -230,15 +230,14 @@ function utils_align_objects(_inst, _inst_align_to, _dir) {
     }
 }
 
-function utils_place_friend() {
-        var border = room_width / 8;
-    var xx = irandom_range(border, room_width - border * 2 );
-    border = room_height / 8;
-    var yy = irandom_range(border, room_height - border * 2);
-    
-    
-    
+function utils_place_friend_by_borders(border_x, border_y) {
+    var xx = irandom_range(border_x, room_width - border_x * 2 );
+    var yy = irandom_range(border_y, room_height - border_y * 2);
     return [xx,yy];
+}
+
+function utils_place_friend() {
+    return utils_place_friend_by_borders(room_width / 8, room_height / 8);
 }
 
 function utils_boundry_adjust(who) {
@@ -251,5 +250,19 @@ function utils_boundry_adjust(who) {
     who.reposition();
 }
 
+/// @param {Asset.GMSound} new_snd sound to start
+/// @param {Id.Sound} snd_id id of sound to stop if playing
+function utils_start_sound(new_snd, snd_id) {
+    if(snd_id != 0) {
+        audio_stop_sound(snd_id);
+    }
+    return audio_play_sound(new_snd, 100, false);
+}
+/// @param {Id.Sound} snd_id soudn to stop
+function utils_stop_sound(snd_id) {
+    if(snd_id != 0) {
+        audio_stop_sound(snd_id);
+    }
+}
 
 

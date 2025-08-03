@@ -76,5 +76,9 @@ global.current_world = rm_test
 global.game_speed = 0;
 #macro FPS global.game_speed
 
+global.score_info_per_world = {}
+#macro WORLD_SCORE_INFO global.score_info_per_world
+
+
 
 

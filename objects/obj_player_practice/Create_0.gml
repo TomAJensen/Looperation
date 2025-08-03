@@ -36,11 +36,17 @@ function show_success() {
     _response_index = min(_response_index + 1, 6);
 }
 
+_splzzzt_sound_id = 0;
+
 function handle_fields()
 {
+    
     var shift_down = keyboard_check(vk_shift) || _shift_latch;
     if(shift_down == false) {
         return;
+    }
+    if(!_shift_latch) {
+        _splzzzt_sound_id = utils_start_sound(snd_spltzzzzt, _splzzzt_sound_id);
     }
     _shift_latch = true;
     if(_field_delay == 0 && shift_down == true) {
@@ -51,6 +57,7 @@ function handle_fields()
     _circle_count += TURN;
     if(_circle_count >= 360) {
         _circle = false;
+        utils_stop_sound(_splzzzt_sound_id)
         var status = utils_is_friend_enclosed_in_circle(_points, obj_star)
         if(status[$"status"]) {
             status[$ "points"] = _points;

@@ -21,6 +21,9 @@ _found = [];
 _shift_latch = false;
 alarm[FIRST_FRIEND] = game_get_speed(gamespeed_fps) * .5
 _event_types = [MSG_NEXT_FRIEND];
+_splzzzt_sound_id = 0;
+
+_collided_friend_id = noone;
 
 _msg_handler = function(msg) {
      var inst = instance_find(obj_friend_manager, 0);
@@ -31,10 +34,13 @@ _msg_handler = function(msg) {
 function handle_fields()
 {
     var shift_down = keyboard_check(vk_shift) || _shift_latch;
-    
+    if(!_shift_latch) {
+        _splzzzt_sound_id = utils_start_sound(snd_spltzzzzt, _splzzzt_sound_id);
+    }    
     if(shift_down == false) {
         return;
     }
+    
     _shift_latch = true;
     if(_field_delay == 0) {
         instance_create_layer(x, y, "instances", obj_field, { "image_angle": direction})
@@ -44,6 +50,7 @@ function handle_fields()
     _circle_count += TURN;
     if(_circle_count >= 360) {
         _circle = false;
+        utils_stop_sound(_splzzzt_sound_id)
         var status = utils_is_friend_enclosed_in_circle(_points)
         if(status[$"status"]) {
             status[$ "points"] = _points;

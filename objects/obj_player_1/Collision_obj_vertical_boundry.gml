@@ -12,5 +12,6 @@ if(direction_changed == true) {
     direction = d;
     _circle = false;
     speed = PLAYER_SPEED;
+    utils_stop_sound(_splzzzt_sound_id);
 }
 

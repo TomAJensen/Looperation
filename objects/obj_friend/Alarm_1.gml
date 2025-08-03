@@ -9,4 +9,4 @@ if(image_alpha <= 0) {
     return;
 }
 alarm[1] = game_get_speed(gamespeed_fps) / 10;
-image_alpha -= .02;
+image_alpha -= .08;
