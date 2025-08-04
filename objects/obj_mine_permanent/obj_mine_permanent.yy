@@ -9,8 +9,8 @@
   "name":"obj_mine_permanent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Mines",
+    "path":"folders/Objects/Mines.yy",
   },
   "parentObjectId":{
     "name":"obj_shaker",

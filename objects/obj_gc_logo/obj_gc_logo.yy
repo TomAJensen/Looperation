@@ -14,8 +14,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_interactable","path":"objects/obj_interactable/obj_interactable.yy",},"propertyId":{"name":"inst_name","path":"objects/obj_interactable/obj_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"gc_logo",},
   ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Display",
+    "path":"folders/Objects/Display.yy",
   },
   "parentObjectId":{
     "name":"obj_interactable",

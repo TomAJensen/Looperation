@@ -8,8 +8,8 @@
   "name":"obj_gc_text",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Display",
+    "path":"folders/Objects/Display.yy",
   },
   "parentObjectId":null,
   "persistent":false,

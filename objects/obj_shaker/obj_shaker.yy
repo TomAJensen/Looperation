@@ -9,8 +9,8 @@
   "name":"obj_shaker",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"system",
+    "path":"folders/Objects/system.yy",
   },
   "parentObjectId":{
     "name":"obj_interactable",

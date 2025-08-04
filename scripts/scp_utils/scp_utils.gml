@@ -266,3 +266,13 @@ function utils_stop_sound(snd_id) {
 }
 
 
+function utils_place_tracking_circle(x_in, y_in, curr_dir) {
+    var the_dir = (curr_dir + 270) % 360;
+    var xx = lengthdir_x(70, the_dir);
+    var yy = lengthdir_y(70, the_dir);
+    var inst_tracking_circle = instance_find(obj_tracking_circle, 0);
+    
+    inst_tracking_circle.move_to(xx + x, yy + y)   
+    
+}
+

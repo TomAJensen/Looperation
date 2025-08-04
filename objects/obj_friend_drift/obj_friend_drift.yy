@@ -11,8 +11,8 @@
   "name":"obj_friend_drift",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Friends",
+    "path":"folders/Objects/Friends.yy",
   },
   "parentObjectId":null,
   "persistent":false,

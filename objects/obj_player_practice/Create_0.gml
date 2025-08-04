@@ -20,6 +20,9 @@ _found = [];
 _collision_countdown = 0;
 _shift_latch = false;
 _response_index = 0;
+_tracking_position_x = 0;
+_tracking_position_y = 0;
+
 alarm[FIRST_FRIEND] = game_get_speed(gamespeed_fps) * .5
 
 function show_success() {
@@ -40,16 +43,18 @@ _splzzzt_sound_id = 0;
 
 function handle_fields()
 {
-    
+    var field_placed = false;
     var shift_down = keyboard_check(vk_shift) || _shift_latch;
     if(shift_down == false) {
-        return;
+        return false;
     }
     if(!_shift_latch) {
         _splzzzt_sound_id = utils_start_sound(snd_spltzzzzt, _splzzzt_sound_id);
     }
     _shift_latch = true;
+    field_placed = true;
     if(_field_delay == 0 && shift_down == true) {
+        
         instance_create_layer(x, y, "instances", obj_field, { "image_angle": direction})
         array_push(_points, [x,y,direction])
         _field_delay = FIELD_DEPLOY_DELAY;
@@ -58,6 +63,8 @@ function handle_fields()
     if(_circle_count >= 360) {
         _circle = false;
         utils_stop_sound(_splzzzt_sound_id)
+        var xy = utils_find_center(_points);
+
         var status = utils_is_friend_enclosed_in_circle(_points, obj_star)
         if(status[$"status"]) {
             status[$ "points"] = _points;
@@ -75,6 +82,9 @@ function handle_fields()
         speed = PLAYER_SPEED;
     }
     _field_delay--;
-    
+    return field_placed
 }
+
+
+
 

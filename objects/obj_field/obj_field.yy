@@ -12,8 +12,8 @@
   "name":"obj_field",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"system",
+    "path":"folders/Objects/system.yy",
   },
   "parentObjectId":null,
   "persistent":false,

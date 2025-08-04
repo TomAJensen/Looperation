@@ -6,4 +6,5 @@ if(_char_index > text_len) {
     return;
 }
 _display_text += string_char_at(_current_line, _char_index++);
-alarm[0] = 1;
+audio_play_sound(snd_display_output, 10, false, .1, 0, 7);
+alarm[0] = 3;

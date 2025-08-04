@@ -32,15 +32,16 @@ _msg_handler = function(msg) {
 }
 
 function handle_fields()
-{
+{   
+    var field_placed = false;
     var shift_down = keyboard_check(vk_shift) || _shift_latch;
     if(!_shift_latch) {
         _splzzzt_sound_id = utils_start_sound(snd_spltzzzzt, _splzzzt_sound_id);
     }    
     if(shift_down == false) {
-        return;
+        return field_placed;
     }
-    
+    field_placed = true;
     _shift_latch = true;
     if(_field_delay == 0) {
         instance_create_layer(x, y, "instances", obj_field, { "image_angle": direction})
@@ -67,6 +68,7 @@ function handle_fields()
         speed = PLAYER_SPEED;
     }
     _field_delay--;
+    return field_placed;
     
 }
 

@@ -10,8 +10,8 @@
   "name":"obj_text_display",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Display",
+    "path":"folders/Objects/Display.yy",
   },
   "parentObjectId":null,
   "persistent":false,

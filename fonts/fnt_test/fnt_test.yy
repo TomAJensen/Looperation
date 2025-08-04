@@ -132,10 +132,7 @@
   "sdfSpread":8,
   "size":32.0,
   "styleName":"Wonder",
-  "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
-  },
+  "textureGroupId":null,
   "TTFName":"D:\\GM-Workspace-2024\\Looperation\\fonts\\fnt_test\\Astron Boy Wonder.otf",
   "usesSDF":true,
 }

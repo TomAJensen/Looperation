@@ -13,8 +13,8 @@
   "name":"obj_difficulty_select",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"system",
+    "path":"folders/Objects/system.yy",
   },
   "parentObjectId":null,
   "persistent":false,

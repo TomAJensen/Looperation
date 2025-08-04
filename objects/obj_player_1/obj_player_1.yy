@@ -21,8 +21,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_interactable","path":"objects/obj_interactable/obj_interactable.yy",},"propertyId":{"name":"inst_name","path":"objects/obj_interactable/obj_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"the_player",},
   ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"player",
+    "path":"folders/Objects/player.yy",
   },
   "parentObjectId":{
     "name":"obj_interactable",

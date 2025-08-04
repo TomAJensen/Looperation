@@ -14,8 +14,8 @@
     {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_interactable","path":"objects/obj_interactable/obj_interactable.yy",},"propertyId":{"name":"is_subscriber","path":"objects/obj_interactable/obj_interactable.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
   ],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Friends",
+    "path":"folders/Objects/Friends.yy",
   },
   "parentObjectId":{
     "name":"obj_interactable",
