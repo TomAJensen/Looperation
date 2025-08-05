@@ -230,6 +230,57 @@ function utils_align_objects(_inst, _inst_align_to, _dir) {
     }
 }
 
+function utils_place_friend_by_quadrant(quad) {
+    var min_x;
+    var min_y;
+    var max_x;
+    var max_y;
+    switch(quad) {
+        case 1:{ // top left
+            min_x = ROOM_BORDER_WIDTH;
+            max_x = room_width / 2;
+            min_y = ROOM_BORDER_WIDTH;
+            max_y = room_height / 2;
+            break;
+        }
+        
+        case 2: { // top right;
+            min_x = room_width / 2;    
+            max_x = room_width - ROOM_BORDER_WIDTH;
+            min_y = ROOM_BORDER_WIDTH;
+            max_y = room_height / 2;
+            break;
+        }
+        
+        case 3: { // bottom left
+            min_x = ROOM_BORDER_WIDTH;
+            max_x = room_width / 2;
+            min_y = room_height / 2;
+            max_y = room_height - ROOM_BORDER_WIDTH;
+            break;
+        }
+        
+        case 4: { // bottom right
+            min_x = room_width / 2;
+            max_x = room_width - ROOM_BORDER_WIDTH;
+            min_y = room_height / 2;
+            max_y = room_height - ROOM_BORDER_WIDTH;
+            break;
+        }
+        
+        default: {
+            min_x = ROOM_BORDER_WIDTH;
+            max_x = room_width - ROOM_BORDER_WIDTH;
+            min_y = ROOM_BORDER_WIDTH;
+            max_y = room_height - ROOM_BORDER_WIDTH;
+        }
+                
+    }    
+    var xx = irandom_range(min_x, max_x);
+    var yy = irandom_range(min_y, max_y);
+    return [xx, yy];
+} 
+
 function utils_place_friend_by_borders(border_x, border_y) {
     var xx = irandom_range(border_x, room_width - border_x * 2 );
     var yy = irandom_range(border_y, room_height - border_y * 2);

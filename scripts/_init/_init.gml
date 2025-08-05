@@ -9,6 +9,29 @@ global.logging_count = 0;
 #macro LOGCOUNT global.logging_count
 show_debug_message("Script: _init")
 
+
+// powerups are gained by touching them.
+global.current_powerup = "";
+#macro CURRENT_POWER_UP global.current_powerup
+#macro PU_TRACKING_CIRCLE "pu_tracking_circle" // Cicle follows player showing where they will circle.
+#macro PU_TARGETING_CIRCLE = "pu_targeting_circle" // Places a circle around the Smorg
+#macro PU_TIME_DILATION "pu_time_dilation" // Slows down time.
+#macro PU_SMORG_ARMOR "pu_armor" // The smorg hs armor to protect him from damage, player bounces off.
+#macro PU_HEALTH_BOMB "pu_health_bomb" // Restores the smorg to full health
+#macro ETHEREAL "pu_ehtereal"  // Player passes through things like a ghost.
+#macro PU_SMART_BOMB "pu_smart_bomb" // clears all duplicated mines 
+#macro PU_AUTO_CIRCLE "pu_auto_circle" // if player within range, moved teh player t the circle and circles automatically.
+
+
+
+#macro OBS_SPLITTING_MINE "obs_splitting_mine" // Splits into 4 mines that the player bounces off.
+#macro OBS_PORTAL "obs_portal" // 2 portals appear and the player jumps between them.
+#macro OBS_EXPLOSIVE_MINES "obs_mine" // player looses control for a set time.
+#macro OBS_DRIFTING_MINES  "obs_drifting_mines" // mines that drift around that the player bounces off and the mine disappears to be respawned. (smart bomb will get rid) 
+#macro OBS_GRAVITY_WELLS "obs_gravity_well" // areas that bend space so players direction is affected.
+
+#macro TIMED_POSITIONS_COUNT 10
+
 global.inst_field_manager = noone;
 global.inst_friends_manager = noone;
 global.end_text = "";
@@ -50,6 +73,7 @@ global.speeds = [
 #macro MSG_SAVED "saved"
 #macro MSG_PORTAL "portal"
 #macro MSG_NEXT_FRIEND "next_friend" 
+#macro MSG_POP "pop" 
 #macro FADED_IN "faded_in"
 #macro FADED_OUT "faded_out"   
 
@@ -79,6 +103,8 @@ global.game_speed = 0;
 global.score_info_per_world = {}
 #macro WORLD_SCORE_INFO global.score_info_per_world
 
+
+#macro ROOM_BORDER_WIDTH 64 
 
 
 

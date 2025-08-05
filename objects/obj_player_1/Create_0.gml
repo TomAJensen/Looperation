@@ -25,6 +25,7 @@ _splzzzt_sound_id = 0;
 
 _collided_friend_id = noone;
 
+
 _msg_handler = function(msg) {
      var inst = instance_find(obj_friend_manager, 0);
     inst.next_friend();

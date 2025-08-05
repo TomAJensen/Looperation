@@ -17,6 +17,7 @@
     {"name":"inst_4FCC235","path":"rooms/rm_world_2/rm_world_2.yy",},
     {"name":"inst_7F4C2402","path":"rooms/rm_world_2/rm_world_2.yy",},
     {"name":"inst_3D8E2A1A","path":"rooms/rm_world_2/rm_world_2.yy",},
+    {"name":"inst_377A77FD","path":"rooms/rm_world_2/rm_world_2.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -38,6 +39,7 @@
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1376.0,"y":608.0,},
         {"$GMRInstance":"v2","%Name":"inst_4FCC235","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4FCC235","objectId":{"name":"obj_twinkle_manager","path":"objects/obj_twinkle_manager/obj_twinkle_manager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1504.0,"y":544.0,},
         {"$GMRInstance":"v2","%Name":"inst_7F4C2402","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7F4C2402","objectId":{"name":"obj_messenger","path":"objects/obj_messenger/obj_messenger.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1600.0,"y":736.0,},
+        {"$GMRInstance":"v2","%Name":"inst_377A77FD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_377A77FD","objectId":{"name":"obj_friend_shadow","path":"objects/obj_friend_shadow/obj_friend_shadow.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1440.0,"y":704.0,},
       ],"layers":[],"name":"overlay","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_3D8E2A1A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3D8E2A1A","objectId":{"name":"obj_tracking_circle","path":"objects/obj_tracking_circle/obj_tracking_circle.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1408.0,"y":512.0,},

@@ -8,10 +8,30 @@ _hit_sound_id = -1;
 _die_sound_id = -1;
 _saved_sound_id = -1;
 
+_friend_positions =[];
+
+_shadow = instance_find(obj_friend_shadow,0);
 
 function reset(friend_count) {
     
 }
+
+
+function generate_friend_positions(count) {
+    var position_array = []
+    var quad = 0;
+    
+    for(var i = 0; i < count; i++) {
+        var location = utils_place_friend_by_quadrant(quad + 1);
+        var xx = location[_X_];
+        var yy = location[_Y_]
+        array_push(position_array, [xx, yy]);
+        quad = (quad + 1) % 4;
+    }
+    
+    return position_array;
+}
+
 
 function next_friend() {
     with(obj_friend) {
@@ -19,9 +39,7 @@ function next_friend() {
         instance_destroy(id)
     }
     
-    var location = utils_place_friend();
-    var xx = location[_X_];
-    var yy = location[_Y_]
+
     if(_friend_count == 0) {
         global.end_text = "You Were Victorious!";
         with(obj_sound_player) {
@@ -31,12 +49,20 @@ function next_friend() {
         room_goto(rm_score);
         return;
     }
-    // TODO: put back
-    //xx = 227;
-    //yy = 718;
+    _friend_count--
+    var xx = _friend_positions[_friend_count][_X_];
+    var yy = _friend_positions[_friend_count][_Y_];
     var friend = instance_create_layer(xx, yy, "Instances", obj_friend, { "timed": timed});
     utils_boundry_adjust(friend);
-    _friend_count--
+    if(_friend_count != 0) {
+        // show next friend pos
+        xx = _friend_positions[_friend_count-1][_X_];
+        yy = _friend_positions[_friend_count-1][_Y_];
+        _shadow.x = xx;
+        _shadow.y = yy;
+        utils_boundry_adjust(_shadow);
+    }
+    
     
 }
 
@@ -69,4 +95,10 @@ function saved_friend() {
         var s = 50 - image_index * 10;    
         other._score += s;
     }    
+}
+
+_friend_positions = generate_friend_positions(friends);
+
+if(auto_spawn) {
+    next_friend();
 }

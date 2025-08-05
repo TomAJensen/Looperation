@@ -74,7 +74,6 @@ function handle_fields()
             _shift_latch = false;
             audio_play_sound(snd_exit, 100, false, 0.5);
             show_success();
-            alarm[NEXT_FRIEND] = 10;
         } else {
             alarm[CLEAR_FIELDS] = game_get_speed(gamespeed_fps) * .25;
         }
