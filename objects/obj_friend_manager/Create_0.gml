@@ -1,4 +1,5 @@
 /// @description 
+event_inherited();
 global.inst_friends_manager = id;
 _friend_count = friends;
 
@@ -11,6 +12,34 @@ _saved_sound_id = -1;
 _friend_positions =[];
 
 _shadow = instance_find(obj_friend_shadow,0);
+_event_types = [MSG_SAVED, MSG_COLLIDED, MSG_DIED, MSG_NEXT_FRIEND, MSG_PORTAL]
+
+_msg_handler = function(msg) {
+    switch (msg[$"type"]) {
+    	case MSG_COLLIDED: {
+            collided_friend();
+            break;
+        }
+        case MSG_SAVED: {
+            saved_friend();
+            break;
+        }
+        case MSG_DIED: {
+            logdebug("MSG_DIED in obj_friend_manager");
+            break;
+        }
+        case MSG_NEXT_FRIEND: {
+            next_friend();
+            break;
+        }
+        case MSG_PORTAL:{
+            _saved_sound_id = audio_play_sound(snd_exit, 100, false);
+            break;
+        }
+            
+    }
+    return true;
+}
 
 function reset(friend_count) {
     
@@ -18,6 +47,7 @@ function reset(friend_count) {
 
 
 function generate_friend_positions(count) {
+    randomize();
     var position_array = []
     var quad = 0;
     
@@ -89,12 +119,15 @@ function collided_friend() {
 }
 
 function saved_friend() {
-    _saved_sound_id = audio_play_sound(snd_exit, 100, false, 0.5);
+    //_saved_sound_id = audio_play_sound(snd_exit, 100, false, 0.5);
     with(obj_friend) {
         array_push(other._saved, [id, image_index])
         var s = 50 - image_index * 10;    
         other._score += s;
+        instance_destroy(id);
     }    
+    
+    next_friend();
 }
 
 _friend_positions = generate_friend_positions(friends);

@@ -37,6 +37,7 @@ global.inst_friends_manager = noone;
 global.end_text = "";
 global.subscribers = noone;
 global.message_queue = noone;
+global.message_watch = [];
 global.player_speed = 7;
 global.circle_speed = 8;
 global.turn = 5.70;
@@ -62,15 +63,17 @@ global.speeds = [
 #macro DIFFICULTY_INFO global.speeds
 #macro DIFICULTY global.speed_index  
 
-#macro FIRST_FRIEND 0 
-#macro NEXT_FRIEND 1
-#macro CLEAR_FIELDS 11
+#macro ALARM_FIRST_FRIEND_0 0 
+#macro ALARM_NEXT_FRIEND_1 1
+#macro ALARM_CLEAR_FIELDS_11 11
 
 #macro FIELD_DEPLOY_DELAY 3 
 
 #macro MSG_SCREEN_SWITCH "screen_switch" 
 #macro MSG_FADE_STATE "fade_state"
 #macro MSG_SAVED "saved"
+#macro MSG_COLLIDED "collided" 
+#macro MSG_DIED "died"
 #macro MSG_PORTAL "portal"
 #macro MSG_NEXT_FRIEND "next_friend" 
 #macro MSG_POP "pop" 
@@ -104,7 +107,7 @@ global.score_info_per_world = {}
 #macro WORLD_SCORE_INFO global.score_info_per_world
 
 
-#macro ROOM_BORDER_WIDTH 64 
+#macro ROOM_BORDER_WIDTH 96 
 
 
 

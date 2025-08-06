@@ -18,6 +18,13 @@ if(_collapsing) {
         return;
     }
     
+    with(obj_field_collider) {
+        x = -110;
+    }
+    with(obj_field) {
+        speed = 20;
+    }
+    
     var friend = instance_find(_collapsing_object, 0)
     instance_create_layer(friend.x, friend.y, "Instances", obj_bang)
     if(destroy_with_bang) {

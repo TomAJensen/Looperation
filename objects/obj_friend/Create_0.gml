@@ -16,7 +16,12 @@ _inst_shadow = instance_find(obj_friend_shadow, 0)
 _timed_positions = []; 
 _inst_mover = noone;
 
-
+_collider = instance_find(obj_field_collider, 0);
+if(_collider == noone) {
+    show_error("obj_field_collider missing", true);
+}
+_collider.x = x;
+_collider.y = y;
 
 
 if(timed) {
@@ -39,6 +44,8 @@ check_collision = function () {
 reposition = function () {
     _cur_x = x;
     _cur_y = y;
+    _collider.x = x;
+    _collider.y = y;
 }
 
 _event_types = [MSG_PORTAL, MSG_SAVED, MSG_POP];

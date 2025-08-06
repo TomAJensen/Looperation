@@ -17,7 +17,7 @@ if(_circle) {
 }
 //
 //_in_collision = true;
-instance_find(obj_friend_manager, 0).collided_friend();
+msg_publish(msg_build_msg(MSG_COLLIDED, inst_name, {}));
 
 
 

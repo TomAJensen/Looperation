@@ -19,16 +19,17 @@ _place_fields = false;
 _points = []
 _found = [];
 _shift_latch = false;
-alarm[FIRST_FRIEND] = game_get_speed(gamespeed_fps) * .5
+alarm[ALARM_FIRST_FRIEND_0] = game_get_speed(gamespeed_fps) * .5
 _event_types = [MSG_NEXT_FRIEND];
 _splzzzt_sound_id = 0;
 
 _collided_friend_id = noone;
+_circle_completed = false;
 
 
 _msg_handler = function(msg) {
-     var inst = instance_find(obj_friend_manager, 0);
-    inst.next_friend();
+     //var inst = instance_find(obj_friend_manager, 0);
+    //inst.next_friend();
     return true;
 }
 
@@ -51,6 +52,7 @@ function handle_fields()
     }
     _circle_count += TURN;
     if(_circle_count >= 360) {
+        _circle_completed = true;
         _circle = false;
         utils_stop_sound(_splzzzt_sound_id)
         var status = utils_is_friend_enclosed_in_circle(_points)
@@ -60,8 +62,9 @@ function handle_fields()
             var field_manager = instance_find(obj_field_manager, 0);
             field_manager.collapse();
             _shift_latch = false;
-            var friend_manager = instance_find(obj_friend_manager, 0);
-            friend_manager.saved_friend();
+            //var friend_manager = instance_find(obj_friend_manager, 0);
+            //friend_manager.saved_friend();
+            //msg_publish(msg_build_msg(MSG_SAVED, inst_name, {}));
         } else {
             //alarm[CLEAR_FIELDS] = game_get_speed(gamespeed_fps) * .25;
         }

@@ -47,9 +47,29 @@ function msg_unsubscribe(_inst_name) {
 ///                 - data: struct or array containing specific data.
 /// @return {Undefined}
 function msg_publish(_msg) {
-    
+    // check for a messenger object
+    if(instance_find(obj_messenger, 0) == noone) {
+        show_error("Messenger missing.", true);
+    }
+    var watch_key = _msg[$"type"] + ":" + _msg[$"who"]
+    if(array_contains(global.message_watch, watch_key)) {
+        show_message($"Message Watch found {watch_key}");
+    }
     ds_list_add(global.message_queue, _msg)
     //loginfo($"Publishing: {_msg}")
+}
+
+function msg_watch(type, who) {
+    var key = type + ":" +who;
+    array_push(global.message_watch, key);
+}
+
+function msg_unwatch(type, who) {
+    var key = type + ":" +who;
+    var index = array_get_index(global.message_watch, key);
+    if(index > -1) {
+        array_delete(global.message_watch, index, 1);
+    }
 }
 
 /// @description distribute each message in the queue to all subscribers.

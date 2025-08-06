@@ -8,7 +8,6 @@ _tracking_points = [
     
 
 
-
 function move_to(xx, yy) {
     x = xx;
     y = yy;

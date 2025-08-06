@@ -20,10 +20,10 @@ if(_popping) {
         reposition();
         //image_xscale = 1;
         //image_yscale = 1;
-        _timed_idx = _timed_idx + 1 % TIMED_POSITIONS_COUNT;
+        _timed_idx = (_timed_idx + 1) % TIMED_POSITIONS_COUNT;
         _popping = false;
         alarm[4] = FPS * .25;
-        audio_play_sound(snd_pop, 100, false);
+        audio_play_sound(snd_smerg_move, 100, false);
         
     }
      return;   
