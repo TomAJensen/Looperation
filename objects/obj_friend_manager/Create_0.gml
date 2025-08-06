@@ -76,6 +76,7 @@ function next_friend() {
             kill_sound();
         }
         SCORE_INFO = {"saved": array_length(_saved), "score": _score, "friends": friends}
+        OBJ_TRACKER = {};
         room_goto(rm_score);
         return;
     }

@@ -9,10 +9,16 @@ image_index = 0;
 
 image_alpha = 0;
 alarm[_FADE_IN_ALARM] = 1;
-_timed_idx = 0;
+
+_inst_shadow = OBJ_TRACKER[$"shadow:"];
+
+
+if(timed) {
+    _inst_timed_shadow = OBJ_TRACKER[$"shadow:timed"]  
+}
 _popping = false;
 _unpopping = false;
-_inst_shadow = instance_find(obj_friend_shadow, 0)
+_timed_idx = 0;
 _timed_positions = []; 
 _inst_mover = noone;
 
@@ -23,16 +29,23 @@ if(_collider == noone) {
 _collider.x = x;
 _collider.y = y;
 
-
+randomize();
 if(timed) {
-    var quad = 0;
+    var quad = irandom(3);
     for(var i = 0; i < TIMED_POSITIONS_COUNT; i++ ) {
         var location = utils_place_friend_by_quadrant(quad + 1);
         var xx = location[_X_];
         var yy = location[_Y_]
         array_push(_timed_positions, [xx, yy]);
-        quad =(quad + 1) % 4;
+        var last_quad = quad;
+        
+        // choose any quad but the current one.
+        while(last_quad == quad) {
+            quad = irandom(3);
+        }
     }
+    _inst_timed_shadow.x = _timed_positions[_timed_idx][_X_];
+    _inst_timed_shadow.y = _timed_positions[_timed_idx][_Y_];
 }
 
 
@@ -65,4 +78,8 @@ _msg_handler = function(msg) {
             return true;
     }
     return true;
+}
+
+place_timed_shadow = function() {
+    
 }

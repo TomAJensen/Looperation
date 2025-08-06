@@ -14,3 +14,6 @@ reposition = function () {
     _cur_x = x;
     _cur_y = y;
 }
+var shadow_name = $"shadow:{is_timed_shadow ? "timed" : ""}"
+OBJ_TRACKER[$ shadow_name] = id;
+

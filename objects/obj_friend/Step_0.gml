@@ -25,6 +25,7 @@ if(_popping) {
         alarm[4] = FPS * .25;
         audio_play_sound(snd_smerg_move, 100, false);
         
+        
     }
      return;   
 }

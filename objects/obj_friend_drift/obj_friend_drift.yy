@@ -36,6 +36,9 @@
     "name":"spr_ghost_smerg",
     "path":"sprites/spr_ghost_smerg/spr_ghost_smerg.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_field_collider",
+    "path":"sprites/spr_field_collider/spr_field_collider.yy",
+  },
   "visible":true,
 }

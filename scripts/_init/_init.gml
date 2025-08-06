@@ -9,6 +9,8 @@ global.logging_count = 0;
 #macro LOGCOUNT global.logging_count
 show_debug_message("Script: _init")
 
+global.object_tracker = {};
+#macro OBJ_TRACKER global.object_tracker
 
 // powerups are gained by touching them.
 global.current_powerup = "";
