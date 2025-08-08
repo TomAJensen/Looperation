@@ -5,6 +5,7 @@ _friend_count = friends;
 
 _saved = [];
 _score = 0;
+_score_possible = friends * SCORE_PER_FRIEND;
 _hit_sound_id = -1;
 _die_sound_id = -1;
 _saved_sound_id = -1;
@@ -75,7 +76,7 @@ function next_friend() {
         with(obj_sound_player) {
             kill_sound();
         }
-        SCORE_INFO = {"saved": array_length(_saved), "score": _score, "friends": friends}
+        SCORE_INFO = {"saved": _saved, "score": _score, "friends": friends}
         OBJ_TRACKER = {};
         room_goto(rm_score);
         return;
@@ -106,6 +107,7 @@ function collided_friend() {
         if(_hit_sound_id != -1) {
             audio_stop_sound(_hit_sound_id);
         }
+        msg_publish(msg_build_msg(MSG_DIED, inst_name, { }))
         _die_sound_id = audio_play_sound(snd_friend_die, 110, false);
         instance_create_layer(friend.x, friend.y, "overlay", obj_friend_die);
         
@@ -127,11 +129,18 @@ function saved_friend() {
         other._score += s;
         instance_destroy(id);
     }    
-    
+    var msg_data =  {}
+    msg_data[$ SCORE_CURRENT] = _score;
+    msg_data[$ SCORE_POSSIBLE] = _score_possible;
+    msg_publish(msg_build_msg(MSG_SCORE, inst_name, msg_data))
     next_friend();
 }
 
 _friend_positions = generate_friend_positions(friends);
+
+
+var msg = msg_build_msg(MSG_TOTAL_SMORGS, inst_name, friends)
+msg_publish(msg);
 
 if(auto_spawn) {
     next_friend();

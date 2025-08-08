@@ -79,6 +79,9 @@ global.speeds = [
 #macro MSG_PORTAL "portal"
 #macro MSG_NEXT_FRIEND "next_friend" 
 #macro MSG_POP "pop" 
+#macro MSG_SCORE "score"
+#macro MSG_TOTAL_SMORGS "smorgs" 
+#macro MSG_8_SEG "8_seg"
 #macro FADED_IN "faded_in"
 #macro FADED_OUT "faded_out"   
 
@@ -110,6 +113,7 @@ global.score_info_per_world = {}
 
 
 #macro ROOM_BORDER_WIDTH 96 
+#macro SCORE_PER_FRIEND 50 
 
 
 

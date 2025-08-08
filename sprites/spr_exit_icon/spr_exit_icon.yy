@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"system",
-    "path":"folders/Objects/system.yy",
+    "path":"folders/Sprites/system.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
